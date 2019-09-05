@@ -16,7 +16,7 @@ def download_inning_data(gid_url, out_path):
 
 def parse_year_page(year_url, out_dir):
     for m in range(3, 12):
-        for d in range(1, 32):
+        for d in range(30, 32):
             # print("month_{:02}/day_{:02}".format(m, d))
             parse_path = "/".join([year_url, "month_{:02}/day_{:02}".format(m, d)])
             print("path: {}".format(parse_path))
