@@ -6,7 +6,7 @@ pitch_attrib_list = ["pitch_type", "start_speed", "end_speed", "spin_dir", "spin
                      "x0", "y0", "ax", "ay", "az", "vx0", "vy0", "vz0","sz_top","sz_bot"]
 
 if __name__ == '__main__':
-    file_path = "sample_data/inning_all_2.xml"
+    file_path = "data/gid_2018_03_01_milmlb_arimlb_1.xml"
 
     f = open(file_path)
     inning_data = f.read()  # ファイル終端まで全て読んだデータを返す
@@ -33,4 +33,4 @@ if __name__ == '__main__':
                     print(pitch.attrib)
     col_names = ["pitcher_id", "batter_id"]
     pitch_df = pd.DataFrame.from_dict(data, orient='index', columns=col_names + pitch_attrib_list)
-    pitch_df.to_csv("pitch_df.csv")
+    pitch_df.to_csv("pitch_df.csv", index=False)

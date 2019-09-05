@@ -29,7 +29,6 @@ def parse_year_page(year_url, out_dir):
                     gid = link.replace("/", "")
                     out_path = os.path.join(out_dir, gid+".xml")
                     download_inning_data(gid_url, out_path)
-                    exit(0)
             exit(0)
 
 if __name__ == '__main__':
