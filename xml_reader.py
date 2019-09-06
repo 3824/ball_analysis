@@ -6,7 +6,7 @@ pitch_attrib_list = ["pitch_type", "start_speed", "end_speed", "spin_dir", "spin
                      "x0", "y0", "ax", "ay", "az", "vx0", "vy0", "vz0","sz_top","sz_bot"]
 
 if __name__ == '__main__':
-    file_path = "sample_data/inning_all_2.xml"
+    file_path = "data/gid_2018_03_01_miamlb_nynmlb_1.xml"
 
     f = open(file_path)
     inning_data = f.read()  # ファイル終端まで全て読んだデータを返す
