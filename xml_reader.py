@@ -18,11 +18,10 @@ def read_pitch_xml(_file_path, gid):
     data = {}
     for inning in root.iter('inning'):
         inning_num = inning.attrib["num"]
-        for atbat in inning.findall("./top/atbat"):
+        for atbat in inning.findall("./*/atbat"):
             batter_id = atbat.attrib["batter"]
             pitcher_id = atbat.attrib["pitcher"]
             for pitch in atbat.findall("./pitch"):
-                print(pitch.attrib)
                 if "start_speed" in pitch.attrib:
                     row = []
                     id = pitch.attrib["id"]
