@@ -2,3 +2,4 @@
 .idea
 .python-version
 *.xml
+.ipynb_checkpoints
