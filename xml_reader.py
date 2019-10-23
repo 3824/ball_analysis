@@ -27,7 +27,10 @@ def parse_inning(inning_num, tb, tb_data):
                 row.append(batter_id)
                 row.append(batter_stand)
                 for att in pitch_attrib_list:
-                    row.append(pitch.attrib[att])
+                    if att in pitch.attrib:
+                        row.append(pitch.attrib[att])
+                    else:
+                        row.append("")
                 data[id] = row
             else:
                 # print(pitch.attrib)
