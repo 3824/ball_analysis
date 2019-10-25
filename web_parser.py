@@ -15,8 +15,8 @@ def download_inning_data(gid_url, out_path):
         file.write(response.content)
 
 def parse_year_page(year_url, out_dir):
-    for m in range(4, 12):
-        for d in range(2, 32):
+    for m in range(7, 8):
+        for d in range(21, 32):
             # print("month_{:02}/day_{:02}".format(m, d))
             parse_path = "/".join([year_url, "month_{:02}/day_{:02}".format(m, d)])
             print("path: {}".format(parse_path))
@@ -29,7 +29,7 @@ def parse_year_page(year_url, out_dir):
                     gid = link.replace("/", "")
                     out_path = os.path.join(out_dir, gid+".xml")
                     download_inning_data(gid_url, out_path)
-            exit(0)
+        exit(0)
 
 if __name__ == '__main__':
     year_url = "http://gd2.mlb.com/components/game/mlb/year_2018"
