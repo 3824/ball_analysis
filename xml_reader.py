@@ -5,7 +5,7 @@ import glob
 import re
 
 pitch_attrib_list = ["pitch_type", "start_speed", "end_speed", "spin_dir", "spin_rate", "pfx_x", "pfx_z", "px", "pz",
-                     "x0", "y0", "ax", "ay", "az", "vx0", "vy0", "vz0","sz_top","sz_bot"]
+                     "x0", "y0", "ax", "ay", "az", "vx0", "vy0", "vz0","sz_top","sz_bot", "type", "code", "event_num", "des"]
 
 def read_pitch_xml(_file_path, gid):
     f = open(_file_path)
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     gid_pattern = re.compile(".+(gid_.+)\\.xml")
     # file_path = "data/gid_2018_03_01_milmlb_arimlb_1.xml"
     df_list = []
-    for file_path in glob.glob("data/*.xml"):
+    for file_path in glob.glob("data/2018/*.xml"):
         res = gid_pattern.match(file_path)
         if res:
             gid = res.group(1)

@@ -18,7 +18,7 @@ def download_inning_data(gid_url, out_path):
 
 def parse_year_page(year_url, out_dir):
     for m in range(4, 12):
-        for d in range(2, 32):
+        for d in range(1, 32):
             # print("month_{:02}/day_{:02}".format(m, d))
             parse_path = "/".join([year_url, "month_{:02}/day_{:02}".format(m, d)])
             print("path: {}".format(parse_path))
@@ -32,8 +32,11 @@ def parse_year_page(year_url, out_dir):
                     out_path = os.path.join(out_dir, gid+".xml")
                     if os.path.exists(out_path):
                         continue
+                    out_path = os.path.join(out_dir, gid+".xml")
+                    if os.path.exists(out_path):
+                        continue
                     download_inning_data(gid_url, out_path)
-            exit(0)
+            # exit(0)
 
 if __name__ == '__main__':
     for year in range(2018, 2020):
