@@ -3,4 +3,5 @@
 .python-version
 *.xml
 .ipynb_checkpoints
+pitch_data
 data
