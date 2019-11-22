@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+.python-version
+*.xml
+.ipynb_checkpoints
+pitch_data
