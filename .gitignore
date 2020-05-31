@@ -4,3 +4,5 @@
 *.xml
 .ipynb_checkpoints
 pitch_data
+data
+other_data
